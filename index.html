@@ -1,0 +1,58 @@
+<!doctype html>
+<html ng-app="ClickLabApp">
+	<head>
+		<title>App</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="app.js"> </script>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-default">
+	          <div class=" navbar-header">
+	            <a class="navbar-brand" href="#">Click Labs Assignment - By Abhivendra Singh(2011IPG-007)</a>
+	          </div>
+    	</nav>
+		</header>
+		<div class="container" ng-controller="ClickCtrl">
+			<div class="row">
+				<div class="col-xs-12">
+					<table class="table table-bordered table-hover ">
+						<thead>
+							<tr>
+						        <th>Engagement Id</th>
+						        <th>Metered Distance(KM)</th>
+						        <th>Metered Time(Min)</th>
+						        <th>Time Deviation(%)</th>
+						        <th>Distance Deviation(%)</th>
+						        <th>Faulty
+					      	</tr>
+				      	</thead>
+				      	<tbody>
+					      <tr ng-repeat="item in result">
+					        <td>{{item.engagement_id}}</td>
+					        <td>{{item.metered_distance}}</td>
+					        <td>{{item.metered_time}}</td>
+					        <td>{{item.time_deviation}}</td>
+					        <td>{{item.distance_deviation}}</td>
+					        <td>{{item.faulty}}</td>
+					      </tr>
+					     </tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="container">
+				<div class="well"> Contact No : 8103412499</div>
+			</div>
+		</footer>
+	</body>
+</html>
